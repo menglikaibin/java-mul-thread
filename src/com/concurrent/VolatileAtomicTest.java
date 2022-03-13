@@ -3,7 +3,7 @@ package com.concurrent;
 public class VolatileAtomicTest {
     public static volatile int num = 0;
 
-    public static synchronized  void increase() {
+    public static synchronized void increase() {
         num ++;
     }
 
@@ -14,7 +14,7 @@ public class VolatileAtomicTest {
             threads[i] = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    for (int j = 0; j < 1000; j++) {
+                    for (int i = 0; i < 1000; i++) {
                         increase();
                     }
                 }
